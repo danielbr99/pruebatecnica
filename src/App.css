@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+.popular-section {
+    margin: 0 70px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.section-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: left;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.section-card {
+    position: relative;
+    background-color: #dadada;
+    border-radius: 0px;
+    overflow: hidden;
+    text-align: left;
+    padding-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.section-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #eee;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section-individual-title {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 10px 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 1024px) {
+    .section-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 18px;
+    }
+    .popular-section {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .popular-section {
+        padding: 20px;
+    }
+    .section-title {
+        font-size: 1.8em;
+        text-align: center;
+        padding-left: 0;
+    }
+    .section-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popular-section {
+        padding: 15px;
+    }
+    .section-title {
+        font-size: 1.5em;
+    }
+    .section-grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 10px;
+    }
+    .section-card {
+        padding-bottom: 8px;
+    }
+    .section-title {
+        font-size: 0.9em;
+        margin: 8px 8px 0;
+    }
 }
